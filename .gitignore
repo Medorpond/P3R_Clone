@@ -1,6 +1,3 @@
-# Visual Studio 2015 user specific files
-.vs/
-
 # Compiled Object files
 *.slo
 *.lo
@@ -73,3 +70,18 @@ Plugins/**/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+# -----------------------------------------------------------------------------
+# IDE & Tool Files
+# -----------------------------------------------------------------------------
+
+# JetBrains Rider
+.idea/
+*.sln.DotSettings.user
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Visual Studio 2015 user specific files
+.vs/
