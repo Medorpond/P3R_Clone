@@ -1,5 +1,6 @@
 #include "P3R_Clone/Public/Character/BaseCharacter.h"
 #include "AbilitySystemComponent.h"
+#include "GAS/CombatAttributeSet.h"
 #include "System/P3R_Logs.h"
 
 ABaseCharacter::ABaseCharacter()
@@ -8,6 +9,8 @@ ABaseCharacter::ABaseCharacter()
 	
 	AbilitySystem = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystem"));
 	//AbilitySystem->SetIsReplicated(true);
+	
+	CreateDefaultSubobject<UCombatAttributeSet>(TEXT("CombatAttributeSet"));
 	
 	// Set default values under
 }
