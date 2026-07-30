@@ -1,6 +1,5 @@
 #include "GAS/CombatAttributeSet.h"
 #include "GameplayEffectExtension.h"
-#include "GameFramework/Character.h"
 
 UCombatAttributeSet::UCombatAttributeSet()
 {
