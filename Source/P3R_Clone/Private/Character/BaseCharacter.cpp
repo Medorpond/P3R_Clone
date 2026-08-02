@@ -25,6 +25,6 @@ void ABaseCharacter::PossessedBy(AController* NewController)
 	}
 	else
 	{
-		UE_LOG(LogGAS, Error, TEXT("Invalid Ability System on %s"), *GetName())
+		UE_LOG(GAS, Error, TEXT("Invalid Ability System on %s"), *GetName())
 	}
 }
