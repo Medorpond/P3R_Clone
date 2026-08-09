@@ -3,7 +3,6 @@
 #include "Character/BaseCharacter.h"
 #include "GAS/CombatAttributeSet.h"
 
-#pragma  region ===TurnData===
 FTurnData::FTurnData(ABaseCharacter* InCharacter)
 {
 	if (!ensureMsgf(IsValid(InCharacter), TEXT("[FTurnData] Invalid Character Input"))) { return; }
@@ -20,9 +19,7 @@ FTurnData::FTurnData(ABaseCharacter* InCharacter)
 	
 	// TODO: Initialize new properties here as they are added
 }
-#pragma endregion
 
-#pragma region ===BattleManager===
 ABattleManager::ABattleManager()
 {
 	PrimaryActorTick.bCanEverTick = false;
@@ -67,6 +64,3 @@ void ABattleManager::RemoveFromQueue(ABaseCharacter* InCharacter)
 		}
 	}
 }
-
-
-#pragma endregion
