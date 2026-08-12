@@ -30,6 +30,8 @@ public: // Constructor
 	explicit FTurnData(ABaseCharacter* InCharacter);
 };
 
+
+
 UCLASS()
 class P3R_CLONE_API ABattleManager : public AActor
 {
@@ -37,6 +39,9 @@ class P3R_CLONE_API ABattleManager : public AActor
 
 public:
 	ABattleManager();
+
+public:
+	
 	
 protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Battle|Turn")

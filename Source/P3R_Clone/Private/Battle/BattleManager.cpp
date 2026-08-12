@@ -20,6 +20,8 @@ FTurnData::FTurnData(ABaseCharacter* InCharacter)
 	// TODO: Initialize new properties here as they are added
 }
 
+
+
 ABattleManager::ABattleManager()
 {
 	PrimaryActorTick.bCanEverTick = false;
