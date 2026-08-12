@@ -1,7 +1,7 @@
 #include "P3R_Clone/Public/Character/BaseCharacter.h"
 #include "AbilitySystemComponent.h"
 #include "GAS/CombatAttributeSet.h"
-#include "System/P3R_Logs.h"
+#include "P3R_Logs.h"
 
 ABaseCharacter::ABaseCharacter()
 {
@@ -25,6 +25,6 @@ void ABaseCharacter::PossessedBy(AController* NewController)
 	}
 	else
 	{
-		UE_LOG(LogGAS, Error, TEXT("Invalid Ability System on %s"), *GetName())
+		UE_LOG(GAS, Error, TEXT("Invalid Ability System on %s"), *GetName())
 	}
 }
