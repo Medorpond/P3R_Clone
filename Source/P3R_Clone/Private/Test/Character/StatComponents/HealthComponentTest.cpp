@@ -32,13 +32,13 @@ bool HealthComponentTest::RunTest(const FString& Parameters)
     
     HealthComp->RegisterComponent();
     
-    UHealthTestListener* HealthListener = NewObject<UHealthTestListener>(TestWorld);
-    UHealthTestListener* MaxHealthListener = NewObject<UHealthTestListener>(TestWorld);
-    UHealthTestListener* HealthDepleteListener = NewObject<UHealthTestListener>(TestWorld);
+    UStatTestListener* HealthListener = NewObject<UStatTestListener>(TestWorld);
+    UStatTestListener* MaxHealthListener = NewObject<UStatTestListener>(TestWorld);
+    UStatTestListener* HealthDepleteListener = NewObject<UStatTestListener>(TestWorld);
     
-    HealthComp->OnHealthChanged.AddDynamic(HealthListener, &UHealthTestListener::HandleHealthChanged);
-    HealthComp->OnMaxHealthChanged.AddDynamic(MaxHealthListener, &UHealthTestListener::HandleHealthChanged);
-    HealthComp->OnHealthDepleted.AddDynamic(HealthDepleteListener, &UHealthTestListener::HandleHealthDeplete);
+    HealthComp->OnHealthChanged.AddDynamic(HealthListener, &UStatTestListener::HandleStatChange);
+    HealthComp->OnMaxHealthChanged.AddDynamic(MaxHealthListener, &UStatTestListener::HandleStatChange);
+    HealthComp->OnHealthDepleted.AddDynamic(HealthDepleteListener, &UStatTestListener::HandleEventBroadcast);
     
     // TEST
     

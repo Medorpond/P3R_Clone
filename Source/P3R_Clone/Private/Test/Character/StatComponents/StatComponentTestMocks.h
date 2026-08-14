@@ -4,7 +4,7 @@
 #include "StatComponentTestMocks.generated.h"
 
 UCLASS()
-class UHealthTestListener : public UObject
+class UStatTestListener : public UObject
 {
 	GENERATED_BODY()
 public:
@@ -12,14 +12,14 @@ public:
 	float ReceivedValue = -1.f;
 	
 	UFUNCTION()
-	void HandleHealthChanged(float NewValue)
+	void HandleStatChange(float NewValue)
 	{
 		bWasCalled = true;
 		ReceivedValue = NewValue;
 	}
 	
 	UFUNCTION()
-	void HandleHealthDeplete()
+	void HandleEventBroadcast()
 	{
 		bWasCalled = true;
 	}
