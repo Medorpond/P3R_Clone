@@ -7,7 +7,7 @@
 #include "HealthComponent.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnHealthChanged, float, NewHealth);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnMaxHealthChanged, float, NewHealth);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnMaxHealthChanged, float, NewMaxHealth);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnHealthDepleted);
 
 UCLASS(ClassGroup=(StatComponent))
@@ -44,14 +44,15 @@ public:
 	
 	
 protected:
-	void SetMaxHealth(float InMaxHealth);
 	void SetHealth(float InHealth);
-	
-	FORCEINLINE float ClampMaxHealth(float InMaxHealth) const
-	{ return FMath::RoundToFloat(FMath::Max(InMaxHealth, 1.f)); }
+	void SetMaxHealth(float InMaxHealth);
 	
 	FORCEINLINE float ClampHealth(float InHealth) const
 	{ return FMath::RoundToFloat(FMath::Clamp(InHealth, 0.f, MaxHealth)); }
+	
+	FORCEINLINE float ClampMaxHealth(float InMaxHealth) const
+	{ return FMath::RoundToFloat(FMath::Max(InMaxHealth, 1.f)); }
+
 	
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Stats|Health", 
