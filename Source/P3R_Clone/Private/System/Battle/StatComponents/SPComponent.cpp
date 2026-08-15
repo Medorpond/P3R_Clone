@@ -1,4 +1,4 @@
-#include "Character/StatComponents/SPComponent.h"
+#include "System/Battle/StatComponents/SPComponent.h"
 
 USPComponent::USPComponent()
 {

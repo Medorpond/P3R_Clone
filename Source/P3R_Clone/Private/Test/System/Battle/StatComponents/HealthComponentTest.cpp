@@ -1,8 +1,8 @@
 #if WITH_DEV_AUTOMATION_TESTS
 
 #include "StatComponentTestMocks.h"
-#include "Character/StatComponents/HealthComponent.h"
 #include "Misc/AutomationTest.h"
+#include "System/Battle/StatComponents/HealthComponent.h"
 
 IMPLEMENT_SIMPLE_AUTOMATION_TEST(HealthComponentTest, "P3R_Clone.P3R_Clone.Private.Test.Character.StatComponents.HealthComponentTest",
                                  EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)

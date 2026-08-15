@@ -1,4 +1,4 @@
-#include "Character/StatComponents/HealthComponent.h"
+#include "System/Battle/StatComponents/HealthComponent.h"
 
 
 UHealthComponent::UHealthComponent()

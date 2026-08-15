@@ -1,8 +1,8 @@
 #if WITH_DEV_AUTOMATION_TESTS
 
 #include "StatComponentTestMocks.h"
-#include "Character/StatComponents/SPComponent.h"
 #include "Misc/AutomationTest.h"
+#include "System/Battle/StatComponents/SPComponent.h"
 
 IMPLEMENT_SIMPLE_AUTOMATION_TEST(SPComponentTest, "P3R_Clone.P3R_Clone.Private.Test.Character.StatComponents.SPComponentTest",
                                  EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)
