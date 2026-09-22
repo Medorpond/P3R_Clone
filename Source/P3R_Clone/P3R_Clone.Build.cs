@@ -12,7 +12,7 @@ public class P3R_Clone : ModuleRules
 			new string[]
 			{
 				"Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput",
-				"GameplayTags", "GameplayTasks", "GameplayAbilities"
+				"GameplayTags", "GameplayTasks", "GameplayAbilities", "Niagara"
 			});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
